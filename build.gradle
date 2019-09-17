@@ -1,0 +1,22 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+
+}
+
+dependencies {
+//    implementation fileTree(dir: 'lib', include: '*.jar')
+    compile "io.projectreactor.kafka:reactor-kafka:1.1.1.RELEASE"
+    compile "org.apache.kafka:kafka-clients:2.0.0"
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+}
